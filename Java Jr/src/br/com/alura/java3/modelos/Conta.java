@@ -4,6 +4,7 @@ public abstract class Conta {
 
 	protected double saldo;
 	private int numero;
+	private String nome;
 
 	@Override
 	public String toString() {
@@ -14,7 +15,7 @@ public abstract class Conta {
 	public boolean equals(Object obj) {
 		Conta outraConta = (Conta) obj;
 
-		return this.numero == outraConta.numero;
+		return (this.numero == outraConta.numero && this.nome == outraConta.nome);
 	}
 
 	public abstract void atualiza(double taxa);
@@ -37,5 +38,13 @@ public abstract class Conta {
 
 	public void setNumero(int numero) {
 		this.numero = numero;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 }

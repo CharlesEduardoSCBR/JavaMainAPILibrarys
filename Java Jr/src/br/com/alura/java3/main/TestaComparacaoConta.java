@@ -10,15 +10,22 @@ public class TestaComparacaoConta {
 		Conta c2 = new ContaCorrente();
 
 		c1.setNumero(1);
-		c2.setNumero(1);
-
-		System.out.println(c1.equals(c2));
+		c1.setNome("Pedro");
 		
+		c2.setNumero(1);
+		c2.setNome("Regina");
+
+		if (c1.equals(c2)) {
+			System.out.println("Com equal igual...");
+		} else {
+			System.out.println("Com equal diferente...");
+		}
+
 		if (c1 == c2) {
 			System.out.println("Iguais com ==");
-		} else{
+		} else {
 			System.out.println("Diferentes com ==");
-		}		
+		}
 	}
 
 }
