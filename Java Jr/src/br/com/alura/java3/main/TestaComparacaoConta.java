@@ -13,6 +13,12 @@ public class TestaComparacaoConta {
 		c2.setNumero(1);
 
 		System.out.println(c1.equals(c2));
+		
+		if (c1 == c2) {
+			System.out.println("Iguais com ==");
+		} else{
+			System.out.println("Diferentes com ==");
+		}		
 	}
 
 }
