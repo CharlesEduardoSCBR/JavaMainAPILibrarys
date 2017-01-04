@@ -4,6 +4,11 @@ public abstract class Conta {
 
 	protected double saldo;
 	
+	@Override
+	public String toString() {    
+        return "esse objeto é uma conta com saldo R$" + this.saldo;
+    }
+	
 	public double getSaldo() {
 		return saldo;
 	}
