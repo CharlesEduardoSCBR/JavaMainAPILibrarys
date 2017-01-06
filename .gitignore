@@ -1,3 +1,7 @@
 *.pdf
 ../docsEstudos
 docsEstudos/*
+RemoteSystemsTempFiles/*
+.recommenders/*
+.metadata/
+Java Jr/.settings/
