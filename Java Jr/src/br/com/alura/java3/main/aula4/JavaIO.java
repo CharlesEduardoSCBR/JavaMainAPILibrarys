@@ -13,9 +13,12 @@ public class JavaIO {
 		InputStreamReader isr = new InputStreamReader(psLeitor);
 		BufferedReader br = new BufferedReader(isr);
 
-		String s = br.readLine();
+		System.out.println("Digite sua mensagem:");
+		String linha = br.readLine(); // primeira linha
 
-		System.out.println(s);
-
+		while (linha != null) {
+			System.out.println(linha);
+			linha = br.readLine();
+		}
 	}
 }
