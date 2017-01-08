@@ -15,10 +15,12 @@ public class JavaIO {
 
 		System.out.println("Digite sua mensagem:");
 		String linha = br.readLine(); // primeira linha
-
+		
 		while (linha != null) {
 			System.out.println(linha);
 			linha = br.readLine();
 		}
+		
+		br.close();
 	}
 }
