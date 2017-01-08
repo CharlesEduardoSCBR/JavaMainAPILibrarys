@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class EntradaDeUmArquivo {
 
 	public static void main(String[] args) throws IOException {
-		InputStream is = new FileInputStream("arquivo.txt");
-		Scanner entrada = new Scanner(is);
+		//InputStream is = new FileInputStream("arquivo.txt");
+		Scanner entrada = new Scanner(System.in);
 
 		System.out.println("Digite sua mensagem:");
 		while (entrada.hasNextLine()) {
