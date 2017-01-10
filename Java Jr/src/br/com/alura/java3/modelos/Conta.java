@@ -3,7 +3,7 @@ package br.com.alura.java3.modelos;
 public abstract class Conta {
 
 	protected double saldo;
-	private int numero;
+	protected int numero;
 	private String nome;
 
 	@Override
