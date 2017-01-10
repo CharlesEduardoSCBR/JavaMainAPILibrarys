@@ -8,7 +8,8 @@ public abstract class Conta {
 
 	@Override
 	public String toString() {
-		return "esse objeto é uma conta com saldo R$" + this.saldo;
+		return "Esse objeto é uma conta com numero " + this.numero + 
+				" com saldo R$" + this.saldo;
 	}
 
 	@Override
