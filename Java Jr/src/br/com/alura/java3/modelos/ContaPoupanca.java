@@ -12,14 +12,6 @@ public class ContaPoupanca extends Conta implements Comparable<ContaPoupanca> {
 
 	@Override
 	public int compareTo(ContaPoupanca outraContaPoupanca) {
-		if (this.numero < outraContaPoupanca.numero) {
-			return -1;
-		}
-
-		if (this.numero > outraContaPoupanca.numero) {
-			return -1;
-		}
-
-		return 0;
+		return this.numero - outraContaPoupanca.numero;
 	}
 }
