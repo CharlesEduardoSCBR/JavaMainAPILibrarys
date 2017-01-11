@@ -12,14 +12,29 @@ public abstract class Conta {
 				" com saldo R$" + this.saldo;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		Conta outraConta = (Conta) obj;
+	public abstract void atualiza(double taxa);
 
-		return (this.numero == outraConta.numero && this.nome == outraConta.nome);
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + numero;
+		return result;
 	}
 
-	public abstract void atualiza(double taxa);
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Conta other = (Conta) obj;
+		if (numero != other.numero)
+			return false;
+		return true;
+	}
 
 	public double getSaldo() {
 		return saldo;
