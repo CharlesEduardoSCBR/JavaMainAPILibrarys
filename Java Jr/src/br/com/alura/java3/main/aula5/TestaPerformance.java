@@ -2,12 +2,13 @@ package br.com.alura.java3.main.aula5;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 
 public class TestaPerformance {
 
 	public static void main(String[] args) {
 		System.out.println("Iniciando...");
-        Collection<Integer> teste = new ArrayList<Integer>();
+        Collection<Integer> teste = new HashSet<Integer>();
         long inicio = System.currentTimeMillis();
 
 		int total = 30000;
