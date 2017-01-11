@@ -12,6 +12,6 @@ public class ContaPoupanca extends Conta implements Comparable<ContaPoupanca> {
 
 	@Override
 	public int compareTo(ContaPoupanca outraContaPoupanca) {
-		return this.getNome().compareToIgnoreCase(outraContaPoupanca.getNome());
+		return this.numero - outraContaPoupanca.numero;
 	}
 }
