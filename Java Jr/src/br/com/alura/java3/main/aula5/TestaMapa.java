@@ -26,5 +26,4 @@ public class TestaMapa {
 		Conta contaDoDiretor = mapaDeContas.get("diretor");
 		System.out.println(contaDoDiretor.getSaldo());
 	}
-
 }
