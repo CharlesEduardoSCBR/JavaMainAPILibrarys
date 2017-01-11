@@ -7,7 +7,7 @@ import java.util.Map;
 public class Banco {
 
 	private List<Conta> contas;
-	private Map<String, Conta> mapaContas;
+	private Map<String, Conta> indexadoPorNome;
 
 	public Banco() {
 		this.contas = new LinkedList<>();
@@ -15,7 +15,7 @@ public class Banco {
 
 	public void adiciona(Conta c) {
 		this.contas.add(c);
-		this.mapaContas.put(c.getNome(), c);
+		this.indexadoPorNome.put(c.getNome(), c);
 	}
 
 	public Conta pega(int x) {
@@ -27,6 +27,6 @@ public class Banco {
 	}
 	
 	public Conta buscaPorNome(String nome){
-		return mapaContas.get(nome);
+		return indexadoPorNome.get(nome);
 	}
 }
