@@ -16,14 +16,14 @@ public class TestaMapa {
 		c2.deposita(3000);
 
 		// cria o mapa
-		Map mapaDeContas = new HashMap();
+		Map<String, Conta> mapaDeContas = new HashMap<String, Conta>();
 
 		// adiciona duas chaves e seus valores
 		mapaDeContas.put("diretor", c1);
 		mapaDeContas.put("gerente", c2);
 
 		// qual a conta do diretor?
-		Conta contaDoDiretor = (Conta) mapaDeContas.get("diretor");
+		Conta contaDoDiretor = mapaDeContas.get("diretor");
 		System.out.println(contaDoDiretor.getSaldo());
 	}
 
