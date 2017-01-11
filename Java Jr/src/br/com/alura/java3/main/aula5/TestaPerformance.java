@@ -11,18 +11,25 @@ public class TestaPerformance {
         Collection<Integer> teste = new HashSet<Integer>();
         long inicio = System.currentTimeMillis();
 
-		int total = 30000;
+		int total = 100000;
 
+		System.out.println("Inserindo elementos na lista:");
         for (int i = 0; i < total; i++) {
             teste.add(i);
         }
-
+        
+        long fim = System.currentTimeMillis();
+        long tempo = fim - inicio;
+        System.out.println("Tempo gasto: " + tempo);
+        
+        inicio = System.currentTimeMillis();
+        System.out.println("Pesquisando elementos na lista:");
         for (int i = 0; i < total; i++) {
             teste.contains(i);
         }
 
-        long fim = System.currentTimeMillis();
-        long tempo = fim - inicio;
+        fim = System.currentTimeMillis();
+        tempo = fim - inicio;
         System.out.println("Tempo gasto: " + tempo);
 
 	}
