@@ -1,12 +1,12 @@
 package br.com.alura.java3.main.aula6;
 
 import java.util.Collection;
-import java.util.HashSet;
+import java.util.LinkedList;
 
 public class RegistroDeMensagens {
 
 	public static void main(String[] args) throws InterruptedException {
-		Collection<String> mensagens = new HashSet<String>();
+		Collection<String> mensagens = new LinkedList<String>();
 
 		Thread t1 = new Thread(new ProduzMensagens(0, 10000, mensagens));
 		Thread t2 = new Thread(new ProduzMensagens(10000, 20000, mensagens));
