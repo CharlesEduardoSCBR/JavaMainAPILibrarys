@@ -1,12 +1,12 @@
 package br.com.alura.java3.main.aula6;
 
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Vector;
 
 public class RegistroDeMensagens {
 
 	public static void main(String[] args) throws InterruptedException {
-		Collection<String> mensagens = new ArrayList<String>();
+		Collection<String> mensagens = new Vector<String>();
 
 		Thread t1 = new Thread(new ProduzMensagens(0, 10000, mensagens));
 		Thread t2 = new Thread(new ProduzMensagens(10000, 20000, mensagens));
