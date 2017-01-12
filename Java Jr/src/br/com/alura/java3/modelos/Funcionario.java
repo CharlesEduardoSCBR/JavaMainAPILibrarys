@@ -1,21 +1,23 @@
 package br.com.alura.java3.modelos;
 
 import java.util.Calendar;
-import java.util.Date;
 
 public class Funcionario {
 	private String nome;
-	private int idade;
-	private Date dataNascimento;
+	private int matricula;
+	private Calendar dataNascimento;
 
-	public Funcionario() {
-	}
-
-	public Funcionario(String nome, int idade, Calendar dataNascimento){
+	public Funcionario(String nome, int matricula, Calendar dataNascimento) {
 		this.nome = nome;
-		this.idade = idade;
-		this.dataNascimento = dataNascimento.getTime();
+		this.matricula = matricula;
+		this.dataNascimento = dataNascimento;
 	}
+
+	@Override
+	public String toString() {
+		return "Funcionario: " + nome;
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -24,24 +26,19 @@ public class Funcionario {
 		this.nome = nome;
 	}
 
-	public int getIdade() {
-		return idade;
+	public int getMatricula() {
+		return matricula;
 	}
 
-	public void setIdade(int idade) {
-		this.idade = idade;
+	public void setMatricula(int matricula) {
+		this.matricula = matricula;
 	}
 
-	public Date getDataNascimento() {
+	public Calendar getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(Calendar dataNascimento) {
 		this.dataNascimento = dataNascimento;
-	}
-	
-	@Override
-	public String toString() {
-		return "Funcionario: " + this.getNome(); 
 	}
 }
