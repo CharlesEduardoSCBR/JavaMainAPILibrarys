@@ -17,9 +17,9 @@ public class TestaGasto {
 		Funcionario f3 = new Funcionario("Jose's3", 3, dataNascimento);
 
 		
-		Gasto g1 = new Gasto(100.00, "particular", f1, dataNascimento, true);
-		Gasto g2 = new Gasto(200.00, "privado", f2, dataNascimento, true);
-		Gasto g3 = new Gasto(300.00, "particular", f3, dataNascimento, false);
+		Gasto g1 = new Gasto(100.00, "particular", f1, dataNascimento);
+		Gasto g2 = new Gasto(200.00, "privado", f2, dataNascimento);
+		Gasto g3 = new Gasto(300.00, "particular", f3, dataNascimento);
 		
 		
 		System.out.println(g1);
