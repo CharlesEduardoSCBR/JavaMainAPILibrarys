@@ -12,11 +12,13 @@ import br.com.alura.controle.modelo.Gasto;
 import br.com.alura.java3.modelos.Funcionario;
 
 public class Importador {
+	private SimpleDateFormat dataGastoImportacao = new SimpleDateFormat("ddMMyyyy");
+
 	public List<Gasto> importa(InputStream entrada) throws ParseException {
 		Scanner leitor = new Scanner(entrada);
 		List<Gasto> gastos = new ArrayList<Gasto>();
+
 		while (leitor.hasNextLine()) {
-			SimpleDateFormat dataGastoImportacao = new SimpleDateFormat("ddMMyyyy");
 			String line = leitor.nextLine();
 			String tipoDeGastoImportacao = line.substring(0, 6);
 			String dataImportacao = line.substring(6, 14);
