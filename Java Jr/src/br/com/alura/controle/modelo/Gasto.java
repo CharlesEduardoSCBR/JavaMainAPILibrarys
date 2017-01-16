@@ -51,5 +51,8 @@ public class Gasto {
 		this.pagoEmDinheiro = pagoEmDinheiro;
 	}
     
-    
+    @Override
+    public String toString() {
+    	return this.funcionario.toString();
+    }
 }
