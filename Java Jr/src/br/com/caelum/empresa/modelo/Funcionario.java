@@ -3,11 +3,22 @@ package br.com.caelum.empresa.modelo;
 import java.util.Calendar;
 
 public class Funcionario {
+	private String nome;
+	private int matricula;
+	private Calendar dataNascimento;
+
+	public Funcionario(String nome, int matricula, Calendar dataNascimento) {
+		this.nome = nome;
+		this.matricula = matricula;
+		this.dataNascimento = dataNascimento;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((dataNascimento == null) ? 0 : dataNascimento.hashCode());
+		result = prime * result
+				+ ((dataNascimento == null) ? 0 : dataNascimento.hashCode());
 		result = prime * result + matricula;
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		return result;
@@ -35,16 +46,6 @@ public class Funcionario {
 		} else if (!nome.equals(other.nome))
 			return false;
 		return true;
-	}
-
-	private String nome;
-	private int matricula;
-	private Calendar dataNascimento;
-
-	public Funcionario(String nome, int matricula, Calendar dataNascimento) {
-		this.nome = nome;
-		this.matricula = matricula;
-		this.dataNascimento = dataNascimento;
 	}
 
 	@Override

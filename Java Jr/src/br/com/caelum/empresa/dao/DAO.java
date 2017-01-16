@@ -7,10 +7,10 @@ import javax.persistence.Query;
 
 public class DAO<T> {
 
-	private final EntityManager entityManager = new JPAUtil().getEntityManager();
+	private final EntityManager entityManager = new JPAUtil()
+			.getEntityManager();
 	private Class<T> classe;
 
-	
 	public DAO(Class<T> classe) {
 		super();
 		this.classe = classe;

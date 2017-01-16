@@ -7,6 +7,7 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 import br.com.caelum.empresa.modelo.Funcionario;
 import br.com.caelum.empresa.modelo.Gasto;
@@ -17,7 +18,7 @@ public class ImportadorDeGastos {
 
 	public Collection<Gasto> importa(InputStream entrada) throws ParseException {
 		Scanner leitor = new Scanner(entrada);
-		Collection<Gasto> gastos = new LinkedHashSet<Gasto>();
+		Set<Gasto> gastos = new LinkedHashSet<Gasto>();
 
 		while (leitor.hasNextLine()) {
 			String line = leitor.nextLine();
