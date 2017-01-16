@@ -5,37 +5,36 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.caelum.empresa.modelo.Gasto;
-
-public class DAO {
+public class DAO<T> {
 
 	private final EntityManager entityManager = new JPAUtil().getEntityManager();
-	private Class<Gasto> classe = Gasto.class;
+	private Class<T> classe;
 
-	public DAO() {
+	
+	public DAO(Class<T> classe) {
 		super();
+		this.classe = classe;
 	}
 
-	public void adiciona(Gasto entity) {
-	    entityManager.persist(entity);
+	public void adiciona(T entity) {
+		entityManager.persist(entity);
 	}
 
-	public Gasto atualiza(Gasto entity) {
-	    return entityManager.merge(entity);
+	public T atualiza(T entity) {
+		return entityManager.merge(entity);
 	}
 
-	public void remove(Gasto entity) {
-	    entityManager.remove(entity);
+	public void remove(T entity) {
+		entityManager.remove(entity);
 	}
 
-	public Gasto buscaPorId(Long id) {
-	    return entityManager.find(classe, id);
+	public T buscaPorId(Long id) {
+		return entityManager.find(classe, id);
 	}
 
-	public List<Gasto> buscaTodos() {
-	    Query query = entityManager
-	            .createQuery("from " + classe.getName());
-	    return query.getResultList();
+	public List<T> buscaTodos() {
+		Query query = entityManager.createQuery("from " + classe.getName());
+		return query.getResultList();
 	}
 
 }

@@ -1,5 +1,11 @@
 package br.com.caelum.empresa.dao;
 
-public class GastoDAO extends DAO {
+import br.com.caelum.empresa.modelo.Gasto;
+
+public class GastoDAO extends DAO<Gasto> {
+
+	public GastoDAO() {
+		super(Gasto.class);
+	}
 
 }
