@@ -18,20 +18,20 @@ public class Importador {
 		while (leitor.hasNextLine()) {
 			SimpleDateFormat df = new SimpleDateFormat("ddMMyyyy");
 			String line = leitor.nextLine();
-			String tp = line.substring(0, 6);
-			String dt = line.substring(6, 14);
-			String vl = line.substring(14, 23);
-			String mat = line.substring(23, 26);
+			String inicioImportacao = line.substring(0, 6);
+			String dataImportacao = line.substring(6, 14);
+			String valorImportado = line.substring(14, 23);
+			String matriculaImportacao = line.substring(23, 26);
 			String nome = line.substring(26, 56);
-			String dataNascTxt = line.substring(56);
-			double valor = Double.parseDouble(vl);
-			int matricula = Integer.parseInt(mat);
+			String dataNascimentoImportacao = line.substring(56);
+			double valor = Double.parseDouble(valorImportado);
+			int matricula = Integer.parseInt(matriculaImportacao);
 			Calendar dataNascimento = Calendar.getInstance();
-			dataNascimento.setTime(df.parse(dataNascTxt));
+			dataNascimento.setTime(df.parse(dataNascimentoImportacao));
 			Calendar dataDespesa = Calendar.getInstance();
-			dataDespesa.setTime(df.parse(dt));
+			dataDespesa.setTime(df.parse(dataImportacao));
 			Funcionario funcionario = new Funcionario(nome, matricula, dataNascimento);
-			gastos.add(new Gasto(valor, tp, funcionario, dataDespesa));
+			gastos.add(new Gasto(valor, inicioImportacao, funcionario, dataDespesa));
 		}
 		return gastos;
 	}
