@@ -28,13 +28,17 @@ public class Importador {
 			String dataNascimentoImportacao = line.substring(56);
 			double valor = Double.parseDouble(valorImportacao);
 			int matricula = Integer.parseInt(matriculaImportacao);
-			Calendar dataNascimento = Calendar.getInstance();
-			dataNascimento.setTime(dataGastoImportacao.parse(dataNascimentoImportacao));
-			Calendar dataDespesa = Calendar.getInstance();
-			dataDespesa.setTime(dataGastoImportacao.parse(dataImportacao));
+			Calendar dataNascimento = converterDataTxtParaCalendar(dataNascimentoImportacao);
+			Calendar dataDespesa = converterDataTxtParaCalendar(dataImportacao);
 			Funcionario funcionario = new Funcionario(nome, matricula, dataNascimento);
 			gastos.add(new Gasto(valor, tipoDeGastoImportacao, funcionario, dataDespesa));
 		}
 		return gastos;
+	}
+
+	private Calendar converterDataTxtParaCalendar(String dataNascimentoImportacao) throws ParseException {
+		Calendar dataNascimento = Calendar.getInstance();
+		dataNascimento.setTime(dataGastoImportacao.parse(dataNascimentoImportacao));
+		return dataNascimento;
 	}
 }
