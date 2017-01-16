@@ -12,6 +12,14 @@ public class Gasto {
     private Calendar data;
     private boolean pagoEmDinheiro;
     
+	public Gasto(double valor, String tipo, Funcionario funcionario, Calendar data, boolean pagoEmDinheiro) {
+		super();
+		this.valor = valor;
+		this.tipo = tipo;
+		this.funcionario = funcionario;
+		this.data = data;
+		this.pagoEmDinheiro = pagoEmDinheiro;
+	}
 	public double getValor() {
 		return valor;
 	}
