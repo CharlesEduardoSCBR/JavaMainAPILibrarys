@@ -16,7 +16,8 @@ public class FiltradorDeGastosEspeciais {
 	public List<Gasto> filtraGastosGrandes(List<Gasto> gastos) {
 		List<Gasto> gastosAcimaDoLimite = new ArrayList<Gasto>();
 		for (Gasto gasto : gastos) {
-			if (gasto.getValor() > this.limite)
+			if (gasto.getValor() >= this.limite)
+			//antes era if (gasto.getValor() > this.limite) gastosAcimaDoLimite.add(gasto);
 				gastosAcimaDoLimite.add(gasto);
 		}
 		return gastosAcimaDoLimite;
