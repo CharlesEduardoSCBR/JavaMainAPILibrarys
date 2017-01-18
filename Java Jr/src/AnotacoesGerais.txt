@@ -1,1 +1,4 @@
 12/01/2017 - Inicio do Curso "Eclipse - Produtividade Extrema na IDE com Java".
+17/01/2017 - Inicio do Curso "Dominando as collections Java".
+	- Porem tem varios implementações que podemos fazer diretamente na plataforma.
+	- Primeiro modulo nao houve necessidade de commitar.
