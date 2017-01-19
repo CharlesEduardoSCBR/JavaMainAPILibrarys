@@ -27,5 +27,12 @@ public class TestaCurso2 {
 		System.out.println(aulas);
 		
 		System.out.println(javaColecoes.getTempoTotal());
+		
+		
+		Curso c = new Curso("T", "Silveira");
+		c.adiciona(aulas.get(0));
+		c.adiciona(aulas.get(1));
+		c.adiciona(aulas.get(2));
+		System.out.println(c.toString());
 	}
 }
