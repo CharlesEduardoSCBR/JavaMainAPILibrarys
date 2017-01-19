@@ -5,7 +5,11 @@ public class Aluno {
 	private String nome;
 	private int numeroMatricula;
 
-	public Aluno(String nome, int numeroMatricula) {
+	public Aluno(String nome, int numeroMatricula) throws NullPointerException{
+		if (nome.isEmpty()) {
+			throw new NullPointerException("Não pode ser nulo");
+		}
+		
 		this.nome = nome;
 		this.numeroMatricula = numeroMatricula;
 	}
