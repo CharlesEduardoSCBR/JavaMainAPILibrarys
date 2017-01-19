@@ -15,7 +15,9 @@ public class TesteMatricula {
 		c.matricula(a2);
 		c.matricula(a3);
 		
-		System.out.println(c.getAlunos());
+		c.getAlunos().forEach(aluno ->{
+			System.out.println(aluno);
+		});
 		
 	}
 
